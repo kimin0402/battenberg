@@ -138,6 +138,6 @@ plot.haplotype.data = function(haplotyped.baf.file, imageFileName, samplename, c
 #' @param no.chrs Number of chromosomes, i.e. the number of files that need to be concatenated
 #' @author dw9
 #' @export
-combine.baf.files = function(inputfile.prefix, inputfile.postfix, outputfile, no.chrs) {
-  concatenateBAFfiles(inputfile.prefix, inputfile.postfix, outputfile, no.chrs)
+combine.baf.files = function(inputfile.prefix, inputfile.postfix, outputfile, chr_names) {  #edited by kimin 2019.12.10 (no.chrs -> chr_names)
+  concatenateBAFfiles(inputfile.prefix, inputfile.postfix, outputfile, chr_names)           #edited by kimin 2019.12.10 (no.chrs -> chr_names)
 }
