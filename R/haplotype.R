@@ -60,7 +60,8 @@ GetChromosomeBAFs = function(chrom, SNP_file, haplotypeFile, samplename, outfile
   # Just select heterozygous SNPs
   het_variant_data = variant_data[variant_data[,6] != variant_data[,7],]
   
-  chr_name = chr_names[as.numeric(chrom)]
+  #chr_name = chr_names[as.numeric(chrom)]
+  chr_name = chrom
   print(chr_name)
   
   # Match allele counts and phasing info
