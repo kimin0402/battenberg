@@ -55,10 +55,10 @@ concatenateImputeFiles<-function(inputStart, boundaries) { #outputFile,
 
 #' Function to concatenate haplotyped BAF output
 #' @noRd
-concatenateBAFfiles<-function(inputStart, inputEnd, outputFile, no.chrs) {
+concatenateBAFfiles<-function(inputStart, inputEnd, outputFile, chr_names) {      #edited by kimin 2019.12.10 (no.chrs -> chr_names)
   all_data<-NULL
   colNames<-NULL
-  for(i in 1:no.chrs)
+  for(i in chr_names)   #edited by kimin 2019.12.10 (1:no.chrs -> chr_names)
   {
     filename = paste(inputStart,i,inputEnd,sep="")
     if(file.exists(filename) && file.info(filename)$size>0)
